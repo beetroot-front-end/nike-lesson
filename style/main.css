@@ -1,0 +1,23 @@
+html, body {
+	height: 100%;
+}
+.violet--bg {
+	background-image: url('../images/bg.jpg');
+	position: relative;
+}
+.violet--bg:before {
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/bg_t.png');
+	position: absolute;
+	z-index: 1;
+}
+.violet--bg,
+.violet--bg:before {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
