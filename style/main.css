@@ -1,6 +1,12 @@
 html, body {
 	height: 100%;
 }
+.nike--violet {
+	padding: 5px 35px;
+	position: relative;
+	z-index: 2;
+	font-family: Roboto;
+}
 .violet--bg {
 	background-image: url('../images/bg.jpg');
 	position: relative;
@@ -20,4 +26,56 @@ html, body {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
+}
+.navigation {
+	width: 85.3%;
+	margin: 30px auto;
+	position: relative;
+}
+.navigation__logo,
+.dropdown {
+	position: absolute;
+	top: 50%;
+}
+.navigation__logo {
+	left: 0;
+}
+.dropdown {
+	right: 0;
+}
+.navigation__logo-img {
+
+}
+.dropdown__menu {
+	display: none;
+}
+.dropdown__toggle {
+	width: 22px;
+	display: block;
+}
+.thumb {
+	height: 3px;
+	background-color: #fff;
+	border-radius: 2px;
+	width: 100%;
+	float: left;
+}
+.thumb+.thumb {
+	margin-top: 3px;
+}
+.navigation__menu {
+	width: 46.2%;
+	margin: 0 auto;
+}
+.navigation__menu-item {
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.navigation__menu-link {
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: 300;
+	text-align: left;
+	text-decoration: none;
 }
