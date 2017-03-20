@@ -32,6 +32,11 @@ html, body {
 	margin: 30px auto;
 	position: relative;
 }
+.navigation:after {
+	clear: both;
+	content: '';
+	display: table;
+}
 .navigation__logo,
 .dropdown {
 	position: absolute;
@@ -78,4 +83,39 @@ html, body {
 	font-weight: 300;
 	text-align: left;
 	text-decoration: none;
+}
+.content {
+	height: 430px;
+	position: relative;
+	margin: 0 auto;
+	width: 85.6%;
+}
+.goods-content {
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+	position: relative;
+	z-index: 5;
+}
+.content:after,
+.content:before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: '';
+}
+.content:before {
+	width: 105%;
+	height: 95%;
+	z-index: 4;
+	background-color: red;
+	opacity: 0.5;
+}
+.content:after {
+	width: 110%;
+	height: 90%;
+	z-index: 3;
+	background-color: blue;
+	opacity: 0.5;
 }
