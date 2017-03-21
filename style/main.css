@@ -84,8 +84,14 @@ html, body {
 	text-align: left;
 	text-decoration: none;
 }
+.navigation__menu-link:hover {
+	border-bottom: 2px solid white;
+	font-weight: 700;
+	transition: 0.2s ease;
+
+}
 .content {
-	height: 430px;
+	height: 530px;
 	position: relative;
 	margin: 0 auto;
 	width: 85.6%;
@@ -109,13 +115,105 @@ html, body {
 	width: 105%;
 	height: 95%;
 	z-index: 4;
-	background-color: red;
+	background-color: white;
 	opacity: 0.5;
 }
 .content:after {
 	width: 110%;
 	height: 90%;
 	z-index: 3;
-	background-color: blue;
-	opacity: 0.5;
+	background-color: white;
+	opacity: 0.3;
+}
+.left-side {
+	width: 70%;
+	height: 100%;
+	background: url("../images/bg_title.png") no-repeat center 25%;
+	background-size: 90%;
+	float: left;
+}
+.content_img {
+	width: 100%;
+	margin-top: 30%;
+	height: 58.1%;
+	width: 80.4%;
+	position: relative;
+	left: 12%;
+	bottom: 10%;
+}
+.right-side {
+	width: 30%;
+	float: right;
+	margin-top: 5%;
+	font-family: 'Roboto', sans-serif;
+}
+.category {
+	width: 18%;
+	background-color: #ffa60d;
+	font-size: 18px;
+	padding: 3%;
+	color: white;
+}
+.slogan {
+	margin-top: 5%;
+	font-size: 30px;
+}
+.slogan_span {
+	color: #5e4fff;
+}
+.evaluation {
+	margin-top: 7%;
+	font-size: 20px;
+}
+.evaluation_list {
+	float: right;
+	position: relative;
+	right: 35%;
+	width: 30%;
+}
+.evaluation_list li {
+	display: inline;
+}
+.evaluation_list li img {
+	width: 15%;
+}
+.price {
+	font-size: 30px;
+	margin-top: 7%;
+}
+.size {
+	margin-top: 7%;
+	font-weight: 700;
+	font-size: 18px;
+}
+.size_list {
+	margin-top: 3%;
+}
+.size_list li {
+	display: inline;
+	margin-right: 10%;
+	padding: 5px;
+}
+.size_list li:hover {
+	border: 2px solid black;
+	transition: 0.2s ease;
+}
+.first-button {
+	margin-top: 20%;
+	background-color: #a200b8;
+	font-size: 14px;
+	color: white;
+	padding: 4%;
+	border-radius: 2px;
+	width: 50%;
+	border: none;
+}
+.second-button {
+	margin-top: 2%;
+	font-size: 14px;
+	padding: 4%;
+	width: 50%;
+	border: 1px solid black;
+	background-color: white;
+	border-radius: 2px;
 }
