@@ -85,7 +85,7 @@ html, body {
 	text-decoration: none;
 }
 .content {
-	height: 430px;
+	height: 450px;
 	position: relative;
 	margin: 0 auto;
 	width: 85.6%;
@@ -171,7 +171,23 @@ html, body {
 }
 .goods__slider_control {
 	position: absolute;
-	bottom: 25px;
+	bottom: 30px;
 	left: 50%;
 	transform: translateX(-50%);
+}
+.goods__slide-item {
+	display: inline-block;
+	width: 80px;
+	height: 60px;
+	border: 2px solid transparent;
+	border-radius: 6px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 60px;
+}
+.goods__slide-item img {
+	width: 95%;
+}
+.goods__slide-item.active {
+	border: 2px solid aqua;
 }
