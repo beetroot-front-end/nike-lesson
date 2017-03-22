@@ -160,8 +160,18 @@ html, body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-height: 290px;
+	pointer-events: none;
 }
-.goods__slide-item input:checked ~ .goods__slider_preview {
+.goods__slider input[type=radio] {
+	display: none;
+}
+.goods__slider input:checked ~ .goods__slider_preview {
 	opacity: 1;
 	transition: opacity 1s ease;
+}
+.goods__slider_control {
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	transform: translateX(-50%);
 }

@@ -45,22 +45,33 @@
 				<div class="goods__preview" id="data" data-model="huarache">
 					<div class="goods__slider">
 						<form action="">
-							<label class="goods__slide-item">
-								<input type="radio" name="slide" checked>
-								<span>FIRST</span>
-								<img class="goods__slider_preview" src="images/img_h.jpg" alt="">
-							</label>
-							<label class="goods__slide-item">
-								<input type="radio" name="slide">
-								<span>SECOND</span>
-								<img class="goods__slider_preview" src="images/img_h2.jpg" alt="">
-							</label>
-							<label class="goods__slide-item">
-								<input type="radio" name="slide">
-								<span>THIRD</span>
-								<img class="goods__slider_preview" src="images/img_h3.jpg" alt="">
-							</label>
+							<ul>
+								<li>
+									<input id="slide_1" type="radio" name="slide" checked>
+									<img class="goods__slider_preview" src="images/img_h.jpg" alt="">
+								</li>
+								<li>
+									<input id="slide_2" type="radio" name="slide">
+									<img class="goods__slider_preview" src="images/img_h2.jpg" alt="">
+								</li>
+								<li>
+									<input id="slide_3" type="radio" name="slide">
+									<img class="goods__slider_preview" src="images/img_h3.jpg" alt="">
+								</li>
+							</ul>
+							
 						</form>
+						<div class="goods__slider_control">
+							<label for="slide_1" class="goods__slide-item">
+								<span>FIRST</span>
+							</label>
+							<label for="slide_2" class="goods__slide-item">
+								<span>SECOND</span>
+							</label>
+							<label for="slide_3" class="goods__slide-item">
+								<span>THIRD</span>	
+							</label>
+						</div>
 					</div>
 				</div>
 				<div class="goods__description">
@@ -69,5 +80,22 @@
 			</div>			
 		</section>
 	</main>
+	<script>
+		(function(){
+			var collection = document.querySelectorAll('.goods__slide-item');
+
+			collection.forEach(function(item){
+				item.addEventListener('click', function(){
+					var el = this;
+				
+					collection.forEach(function(i){
+						i.classList.remove('active');
+					});
+					el.classList.add('active');
+				})
+			});
+		}());
+
+	</script>
 </body>
 </html>
