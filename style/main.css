@@ -132,3 +132,20 @@ html, body {
 	float: left;
 	position: relative;
 }
+.goods__preview:before {
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 100%;
+
+	content: attr(data-model);	
+	text-align: center;
+	display: block;
+	font-size: 100px;
+	letter-spacing: 5px;
+	font-weight: 600;
+	color: #fff;
+	opacity: .8;
+	text-transform: uppercase;
+}
