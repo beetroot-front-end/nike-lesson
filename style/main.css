@@ -131,6 +131,7 @@ html, body {
 	height: 100%;
 	float: left;
 	position: relative;
+	overflow: hidden;
 }
 .goods__preview:before {
 	top: 30%;
@@ -146,7 +147,21 @@ html, body {
 	letter-spacing: 5px;
 	font-weight: 600;
 	color: #fff;
-	opacity: .8;
-	z-index: 1;
+	opacity: .6;
+	z-index: 3;
 	text-transform: uppercase;
+}
+
+.goods__slider_preview {
+	opacity: 0;
+	position: absolute;
+	z-index: 2;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-height: 290px;
+}
+.goods__slide-item input:checked ~ .goods__slider_preview {
+	opacity: 1;
+	transition: opacity 1s ease;
 }
