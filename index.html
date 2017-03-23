@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="style/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style/main.css">
+</head>
+<body class="violet--bg">
+	<main class="nike--violet">
+		<nav class="navigation">
+			<a href="#" class="navigation__logo">
+				<img src="images/logo.svg" class="navigation__logo-img" alt="">
+			</a>
+			<ul class="navigation__menu">
+				<li class="navigation__menu-item">
+					<a class="navigation__menu-link" href="#">LIFESTYLE</a>
+				</li>
+				<li class="navigation__menu-item">
+					<a class="navigation__menu-link" href="#">RUNNING</a>
+				</li>
+				<li class="navigation__menu-item">
+					<a class="navigation__menu-link" href="#">FOOTBALL</a>
+				</li>
+				<li class="navigation__menu-item">
+					<a class="navigation__menu-link" href="#">SKATEBOARDING</a>
+				</li>
+			</ul>
+			<div class="dropdown">
+				<span class="dropdown__toggle">
+					<i class="thumb"></i>
+					<i class="thumb"></i>
+					<i class="thumb"></i>
+				</span>
+				<ul class="dropdown__menu">
+					<li>item</li>
+					<li>item</li>
+					<li>item</li>
+				</ul>
+			</div>
+		</nav>		
+		<section class="content">
+			<div class="goods__content">
+				<div class="goods__preview" id="data" data-model="huarache">
+					<div class="goods__slider">
+						<form action="">
+							<ul>
+								<li>
+									<input id="slide_1" type="radio" name="slide" checked>
+									<img class="goods__slider_preview" src="images/img_h.jpg" alt="">
+								</li>
+								<li>
+									<input id="slide_2" type="radio" name="slide">
+									<img class="goods__slider_preview" src="images/img_h2.jpg" alt="">
+								</li>
+								<li>
+									<input id="slide_3" type="radio" name="slide">
+									<img class="goods__slider_preview" src="images/img_h3.jpg" alt="">
+								</li>
+							</ul>
+							
+						</form>
+						<div class="goods__slider_control">
+							<label for="slide_1" class="goods__slide-item active">
+								<img src="images/img_h.jpg" alt="">
+							</label>
+							<label for="slide_2" class="goods__slide-item">
+								<img src="images/img_h2.jpg" alt="">
+							</label>
+							<label for="slide_3" class="goods__slide-item">
+								<img src="images/img_h3.jpg" alt="">
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="goods__description">
+					<p class="gooods__sticker">NEW</p>
+					<h2 class="goods__heading">THE <span>RUNNING</span> <br>HAS JUST BEGUN</h2>
+					<p class="goods__model_name">Huarache</p>
+					<div class="goods__rate">
+					<ul>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					</ul>
+					</div>
+					<p class="goods__price">$ 200</p>
+					<div class="goods__size">
+					<p class="goods__size_heading">Size</p>
+						<form action="">
+							<input type="radio" name="size" id="size_7">
+							<input type="radio" name="size" id="size_8">
+							<input type="radio" name="size" id="size_9" checked>
+							<input type="radio" name="size" id="size_10">
+							<input type="radio" name="size" id="size_11">
+						</form>
+						<div class="goods__size_variants">
+							<label for="size_7" class="goods__size-variant">7</label>
+							<label for="size_8" class="goods__size-variant">8</label>
+							<label for="size_9" class="goods__size-variant">9</label>
+							<label for="size_10" class="goods__size-variant">10</label>
+							<label for="size_11" class="goods__size-variant">11</label>
+						</div>
+						<button class="goods__cart">ADD TO CART</button>
+						<button class="goods__wishlist">WISHLIST</button>
+					</div>
+				</div>
+			</div>			
+		</section>
+	</main>
+	<script>
+		(function(){
+			var collection = document.querySelectorAll('.goods__slide-item');
+
+			collection.forEach(function(item){
+				item.addEventListener('click', function(){
+					var el = this;
+				
+					collection.forEach(function(i){
+						i.classList.remove('active');
+					});
+					el.classList.add('active');
+				})
+			});
+		}());
+	(function(){
+			var sizeCollection = document.querySelectorAll('.goods__size-variant');
+			sizeCollection.forEach(function(item){
+				item.addEventListener('click', function(){
+					var el = this;
+				
+					sizeCollection.forEach(function(i){
+						i.classList.remove('checked');
+					});
+					el.classList.add('checked');
+				})
+			});
+		}());
+	</script>
+</body>
+</html>
